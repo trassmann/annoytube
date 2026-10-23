@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "AnnoyTube",
+  "version": "0.1.0",
+  "description": "YouTube's arrow keys always seek ±5 s and change the volume ±5 %, whatever has focus.",
+  "minimum_chrome_version": "111",
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ]
+}

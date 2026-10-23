@@ -1,0 +1,3 @@
+# esbuild runs fine without its optional postinstall step (it finds its platform binary on its own).
+allowBuilds:
+  esbuild: false
