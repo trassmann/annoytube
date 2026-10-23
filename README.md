@@ -34,6 +34,17 @@ Then open `brave://extensions`, turn on **Developer mode**, click **Load unpacke
 | `pnpm test`  | Runs the unit tests (Vitest + happy-dom)         |
 | `pnpm check` | Lint and format check (Biome), type check, tests |
 | `pnpm fix`   | Applies Biome's formatting and safe lint fixes   |
+| `pnpm zip`   | Clean build, packed into `annoytube.zip`         |
+
+## Publishing to the Chrome Web Store
+
+1. Bump `version` in [`src/manifest.json`](src/manifest.json).
+2. Run `pnpm zip`.
+3. Upload `annoytube.zip` in the
+   [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole), then
+   submit it for review.
+
+The listing copy, privacy answers and images are in [`store/`](store).
 
 ## How it works
 

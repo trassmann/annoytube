@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <title>AnnoyTube</title>
+  <!-- 96×96 artwork with 16 px transparent padding, per the Chrome Web Store icon guidelines. -->
+  <rect x="16" y="16" width="96" height="96" rx="22" fill="#18181b"/>
+  <g fill="#71717a">
+    <rect x="52" y="39.5" width="24" height="24" rx="5"/>
+    <rect x="23" y="68.5" width="24" height="24" rx="5"/>
+    <rect x="52" y="68.5" width="24" height="24" rx="5"/>
+    <rect x="81" y="68.5" width="24" height="24" rx="5"/>
+  </g>
+  <g fill="#fafafa">
+    <rect x="52" y="37.5" width="24" height="24" rx="5"/>
+    <rect x="23" y="66.5" width="24" height="24" rx="5"/>
+    <rect x="52" y="66.5" width="24" height="24" rx="5"/>
+    <rect x="81" y="66.5" width="24" height="24" rx="5"/>
+  </g>
+  <g fill="#ff2d3a">
+    <path d="M64 44.5l6.5 9h-13z"/>
+    <path d="M28.5 78.5l9-6.5v13z"/>
+    <path d="M64 84.5l-6.5-9h13z"/>
+    <path d="M99.5 78.5l-9 6.5v-13z"/>
+  </g>
+</svg>
