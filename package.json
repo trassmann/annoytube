@@ -3,8 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "esbuild src/content.ts src/manifest.json --bundle --outdir=dist --loader:.json=copy --target=chrome111",
+    "build": "esbuild src/content.ts src/manifest.json 'src/icons/*.png' --bundle --outdir=dist --loader:.json=copy --loader:.png=copy --target=chrome111",
     "dev": "pnpm build --watch",
+    "zip": "rm -rf dist annoytube.zip && pnpm build && cd dist && zip -qr ../annoytube.zip . -x '*.DS_Store'",
     "check": "biome check && tsc && vitest run",
     "fix": "biome check --write",
     "test": "vitest"
