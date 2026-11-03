@@ -9,11 +9,7 @@
  * volume persistence all keep working. Must run in the page's (MAIN) world to reach the player API.
  */
 
-/** Methods YouTube adds to its player element. They may be missing while the player boots. */
-interface YouTubePlayer extends HTMLElement {
-  isMuted?: () => boolean;
-  unMute?: () => void;
-}
+import { isWatchPage, watchPagePlayer, type YouTubePlayer } from './youtube';
 
 const SEEK_KEYS: ReadonlySet<string> = new Set(['ArrowLeft', 'ArrowRight']);
 const VOLUME_KEYS: ReadonlySet<string> = new Set(['ArrowUp', 'ArrowDown']);
@@ -43,13 +39,10 @@ function needsArrowKeys(target: EventTarget | undefined): boolean {
 
 /** The player that should receive `key` on the current page, if any. */
 function findPlayer(key: string): YouTubePlayer | null {
-  const { pathname } = location;
-  if (pathname === '/watch' || pathname.startsWith('/live/')) {
-    return document.getElementById('movie_player');
-  }
+  if (isWatchPage()) return watchPagePlayer();
   // On Shorts, ↑/↓ switch to the previous/next short (the player has no volume keys there),
   // so only seeking is routed.
-  if (pathname.startsWith('/shorts/') && SEEK_KEYS.has(key)) {
+  if (location.pathname.startsWith('/shorts/') && SEEK_KEYS.has(key)) {
     return document.getElementById('shorts-player');
   }
   return null;

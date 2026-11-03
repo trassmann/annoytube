@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "AnnoyTube: Consistent Arrow Keys for YouTube",
+  "name": "AnnoyTube: Fixes for YouTube's Keys and Autoplay",
   "short_name": "AnnoyTube",
   "version": "1.0.0",
-  "description": "YouTube's arrow keys always seek ±5 s and change the volume ±5 %, whatever has focus. Collects no data.",
+  "description": "Arrow keys always seek and set the volume, media keys skip videos, and autoplay plays the top sidebar video. Collects no data.",
   "minimum_chrome_version": "111",
   "icons": {
     "16": "icons/icon-16.png",
